@@ -1,3 +1,108 @@
-body {
-    background-color: rebeccapurple;
-  }
+:root{
+    --base-clr: #26054D;
+    --line-clr: #3F37C9;
+    --hover-clr: #3A0CA3;
+    --text-clr: #e6e6ef;
+    --accent-clr: #B5179E;
+    --active-clr: #480CA8;
+    --secondary-text-clr: #b0b3c1;
+    --div-back-clr: #7209B7;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5rem;
+}
+
+body{
+    min-height: 100vh;
+    min-height: 100dvh;
+    background-color: var(--base-clr);
+    color: var(--text-clr);
+    display: grid;
+
+    row-gap: 2em;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content 1fr auto;
+    
+}
+
+button{
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 5px;
+    min-height: 40px;
+    border: none;
+    border-radius: 5px;
+    color: inherit;
+    background-color: var(--line-clr);
+    min-width: 10ch;
+
+    font-size: 1.3em;
+}
+
+:focus-visible, :focus{
+    outline: 3px solid var(--accent-clr);
+}
+
+button:hover{
+    background-color: var(--hover-clr);
+}
+button:active{
+    background-color: var(--active-clr);
+}
+
+/* for implementing tabbed browsing */
+/* i can do display none but its bad for accessability so this is the alternative*/
+.hide {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+ }
+
+
+ header{
+    min-height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--div-back-clr);
+    nav{
+        *{
+            margin-left: 1em;
+        }
+    }
+ }
+
+ #content{
+    background-color: var(--div-back-clr);
+    margin: 0 10rem;
+    border-radius: 15px;
+    padding: 2em;
+    font-size: 1.5vw;
+    display: flex;
+    flex-direction: column;
+    /* gap: 4em; */
+    justify-content: space-between;
+    align-items: center;
+    
+    *{
+        background-color: var(--base-clr);
+        padding: 1em;
+        border-radius: 1.5em;
+        line-height: 1.5vw;
+    }
+    div{
+        max-width: 30ch;
+        
+        
+    }
+ }
