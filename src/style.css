@@ -98,11 +98,9 @@ button:active{
         background-color: var(--base-clr);
         padding: 1em;
         border-radius: 1.5em;
-        line-height: 1.5vw;
+        line-height: 1.8vw;
     }
     div{
-        max-width: 30ch;
-        
-        
+        width: 40ch;
     }
  }
