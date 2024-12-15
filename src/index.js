@@ -3,6 +3,11 @@ import {home} from "./home.js"
 import { menu } from "./menu.js";
 import { about } from "./about.js";
 
+//webpack build check-.-
+if (process.env.NODE_ENV !== 'production') {
+    console.log('Looks like we are in development mode!');
+  }
+
 //side effect import for linking
 const content = document.querySelector("#content");
 console.log("greeting");
